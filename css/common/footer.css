@@ -1,8 +1,13 @@
 footer {
-	position: fixed;
+	position: relative;
 	bottom: 0;
-	padding: 20px 0 0 0;
+	padding: 10px;
 	margin: 0 auto;
 	width: 100%;
 	text-align: center;
+	background-color: rgba(242, 141, 19, 1);
+}
+
+footer p {
+	color: #f2f2f2;
 }

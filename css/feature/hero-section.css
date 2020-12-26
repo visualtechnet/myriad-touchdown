@@ -1,0 +1,8 @@
+.hero-section {
+	background: url('../../photos/hero-football-800.jpg') 0 0 no-repeat;
+	background-size: cover;
+	background-position: top center;
+	width: 100%;
+	min-height: 300px;
+	margin-bottom: 30px;
+}

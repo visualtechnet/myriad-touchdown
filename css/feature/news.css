@@ -1,0 +1,14 @@
+.news {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.news li {
+	padding: 5px;
+}
+
+.news-title {
+	font-size: 1.1em;
+	font-weight: bold;
+}

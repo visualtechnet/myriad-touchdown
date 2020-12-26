@@ -2,12 +2,12 @@ p {
 	color: rgba(12, 12, 12, 1);
 }
 
-a {
-	color: rgba(3, 66, 191, 1);
+.text-section {
+	color: rgba(242, 141, 19, 1);
 }
 
-.text-accent {
-	color: rgba(242, 141, 19, 1);
+.text-title {
+	color: rgba(3, 66, 191, 1);
 }
 
 .alert {
