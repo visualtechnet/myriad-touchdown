@@ -1,5 +1,6 @@
 @import url('./common/header.css');
 @import url('./common/footer.css');
+@import url('./color.css');
 
 * {
 	box-sizing: border-box;
@@ -9,6 +10,8 @@ body {
 	font-size: 16px;
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
 		'Lucida Sans', Arial, sans-serif;
+	padding: 0;
+	margin: 0;
 }
 
 h1 {
@@ -25,4 +28,15 @@ h3 {
 
 p {
 	font-size: 1.1em;
+}
+
+main {
+	padding: 10px;
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.item-section {
+	min-height: 200px;
 }

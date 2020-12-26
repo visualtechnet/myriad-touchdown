@@ -1,20 +1,28 @@
-/* Color Theme Swatches in Hex */
-.Creative-collage-of-photos-of-7-models-on-black-in-mixed-light.-Advertising,-sport,-healthy-lifestyle,-motion,-activity,-movement-concept.-American-football,-soccer,-tennis-volleyball-basketball-rugby-1-hex { color: #73020C; }
-.Creative-collage-of-photos-of-7-models-on-black-in-mixed-light.-Advertising,-sport,-healthy-lifestyle,-motion,-activity,-movement-concept.-American-football,-soccer,-tennis-volleyball-basketball-rugby-2-hex { color: #0442BF; }
-.Creative-collage-of-photos-of-7-models-on-black-in-mixed-light.-Advertising,-sport,-healthy-lifestyle,-motion,-activity,-movement-concept.-American-football,-soccer,-tennis-volleyball-basketball-rugby-3-hex { color: #F28E13; }
-.Creative-collage-of-photos-of-7-models-on-black-in-mixed-light.-Advertising,-sport,-healthy-lifestyle,-motion,-activity,-movement-concept.-American-football,-soccer,-tennis-volleyball-basketball-rugby-4-hex { color: #A62508; }
-.Creative-collage-of-photos-of-7-models-on-black-in-mixed-light.-Advertising,-sport,-healthy-lifestyle,-motion,-activity,-movement-concept.-American-football,-soccer,-tennis-volleyball-basketball-rugby-5-hex { color: #0D0D0D; }
+p {
+	color: rgba(12, 12, 12, 1);
+}
 
-/* Color Theme Swatches in RGBA */
-.Creative-collage-of-photos-of-7-models-on-black-in-mixed-light.-Advertising,-sport,-healthy-lifestyle,-motion,-activity,-movement-concept.-American-football,-soccer,-tennis-volleyball-basketball-rugby-1-rgba { color: rgba(114, 2, 11, 1); }
-.Creative-collage-of-photos-of-7-models-on-black-in-mixed-light.-Advertising,-sport,-healthy-lifestyle,-motion,-activity,-movement-concept.-American-football,-soccer,-tennis-volleyball-basketball-rugby-2-rgba { color: rgba(3, 66, 191, 1); }
-.Creative-collage-of-photos-of-7-models-on-black-in-mixed-light.-Advertising,-sport,-healthy-lifestyle,-motion,-activity,-movement-concept.-American-football,-soccer,-tennis-volleyball-basketball-rugby-3-rgba { color: rgba(242, 141, 19, 1); }
-.Creative-collage-of-photos-of-7-models-on-black-in-mixed-light.-Advertising,-sport,-healthy-lifestyle,-motion,-activity,-movement-concept.-American-football,-soccer,-tennis-volleyball-basketball-rugby-4-rgba { color: rgba(165, 37, 8, 1); }
-.Creative-collage-of-photos-of-7-models-on-black-in-mixed-light.-Advertising,-sport,-healthy-lifestyle,-motion,-activity,-movement-concept.-American-football,-soccer,-tennis-volleyball-basketball-rugby-5-rgba { color: rgba(12, 12, 12, 1); }
+a {
+	color: rgba(3, 66, 191, 1);
+}
 
-/* Color Theme Swatches in HSLA */
-.Creative-collage-of-photos-of-7-models-on-black-in-mixed-light.-Advertising,-sport,-healthy-lifestyle,-motion,-activity,-movement-concept.-American-football,-soccer,-tennis-volleyball-basketball-rugby-1-hsla { color: hsla(354, 96, 22, 1); }
-.Creative-collage-of-photos-of-7-models-on-black-in-mixed-light.-Advertising,-sport,-healthy-lifestyle,-motion,-activity,-movement-concept.-American-football,-soccer,-tennis-volleyball-basketball-rugby-2-hsla { color: hsla(219, 96, 38, 1); }
-.Creative-collage-of-photos-of-7-models-on-black-in-mixed-light.-Advertising,-sport,-healthy-lifestyle,-motion,-activity,-movement-concept.-American-football,-soccer,-tennis-volleyball-basketball-rugby-3-hsla { color: hsla(33, 89, 51, 1); }
-.Creative-collage-of-photos-of-7-models-on-black-in-mixed-light.-Advertising,-sport,-healthy-lifestyle,-motion,-activity,-movement-concept.-American-football,-soccer,-tennis-volleyball-basketball-rugby-4-hsla { color: hsla(11, 90, 34, 1); }
-.Creative-collage-of-photos-of-7-models-on-black-in-mixed-light.-Advertising,-sport,-healthy-lifestyle,-motion,-activity,-movement-concept.-American-football,-soccer,-tennis-volleyball-basketball-rugby-5-hsla { color: hsla(0, 0, 5, 1); }
+.text-accent {
+	color: rgba(242, 141, 19, 1);
+}
+
+.alert {
+	color: rgba(165, 37, 8, 1);
+}
+
+.bg-primary {
+	background-color: rgba(12, 12, 12, 1);
+}
+
+.bg-secondary {
+	background-color: rgba(114, 2, 11, 1);
+}
+
+header {
+	background-color: rgba(12, 12, 12, 1);
+	color: #fff;
+}

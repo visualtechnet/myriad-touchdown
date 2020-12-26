@@ -1,3 +1,36 @@
+header {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .brand-text {
-	font-size: 1.2em;
+	font-size: 1.6em;
+	width: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgba(242, 141, 19, 1);
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+}
+
+nav li {
+	padding: 10px;
+	border-bottom: solid 2px transparent;
+	color: antiquewhite;
+}
+
+nav li.active {
+	border-bottom: solid 2px rgba(114, 2, 11, 1);
+	color: #ffffff;
+}
+
+nav li:hover {
+	border-bottom: solid 2px rgba(114, 2, 11, 1);
+	color: #ffffff;
 }
