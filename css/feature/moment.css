@@ -1,0 +1,12 @@
+.moments {
+	list-style: none;
+	margin: 20px 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	grid-column-gap: 2%;
+}
+
+.moments img {
+	max-width: 300px;
+}

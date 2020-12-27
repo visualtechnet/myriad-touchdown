@@ -1,8 +1,6 @@
 footer {
-	position: relative;
-	bottom: 0;
+	margin-top: 20px;
 	padding: 10px;
-	margin: 0 auto;
 	width: 100%;
 	text-align: center;
 	background-color: rgba(242, 141, 19, 1);

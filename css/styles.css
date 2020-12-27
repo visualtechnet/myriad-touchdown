@@ -3,6 +3,10 @@
 @import url('./color.css');
 @import url('./feature/hero-section.css');
 @import url('./feature/news.css');
+@import url('./feature/photos.css');
+@import url('./feature//poll.css');
+@import url('./feature/videos.css');
+@import url('./feature/moment.css');
 
 * {
 	box-sizing: border-box;
@@ -45,4 +49,5 @@ main {
 
 .item-section {
 	min-height: 200px;
+	margin: 20px 0;
 }
