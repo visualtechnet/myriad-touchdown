@@ -5,6 +5,13 @@ header {
 	align-items: center;
 }
 
+.fixed-header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
 .brand-text {
 	font-size: 1.6em;
 	width: 300px;

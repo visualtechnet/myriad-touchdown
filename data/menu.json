@@ -1,0 +1,22 @@
+[
+	{
+		"title": "News",
+		"source": "news.json"
+	},
+	{
+		"title": "Photos",
+		"source": "photos.json"
+	},
+	{
+		"title": "Poll",
+		"source": ""
+	},
+	{
+		"title": "Moments",
+		"source": "moments.json"
+	},
+	{
+		"title": "Videos",
+		"source": ""
+	}
+]
