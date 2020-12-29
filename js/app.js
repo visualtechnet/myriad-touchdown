@@ -40,6 +40,7 @@
 		const menuText = this.textContent.toLowerCase()
 		const section = document.querySelector('#' + menuText)
 		const header = document.querySelector('header')
+		const allMenuItems = document.querySelectorAll('.menu-container li')
 
 		section.scrollIntoView({
 			behavior: 'smooth',
@@ -47,17 +48,26 @@
 			inline: 'end'
 		})
 		header.classList.add('fixed-header')
-		console.log(menuText)
+
+		allMenuItems.forEach(function (menu) {
+			menu.classList.remove('active')
+		})
+
+		this.classList.add('active')
 	}
 
 	function displayMenu(list) {
 		const menuContainer = document.querySelector('.menu-container')
 		const fragmenItem = document.createDocumentFragment()
 
-		list.forEach(function (item) {
+		list.forEach(function (item, index) {
 			const liItem = document.createElement('li')
 			liItem.textContent = item.title
 			liItem.addEventListener('click', handleMenuList)
+
+			if (index === 0) {
+				liItem.classList.add('active')
+			}
 			fragmenItem.appendChild(liItem)
 		})
 
@@ -126,10 +136,36 @@
 	})
 
 	window.addEventListener('scroll', function () {
-		if (window.scrollY === 0) {
-			const header = document.querySelector('header')
+		const header = document.querySelector('header')
+		const menuItems = document.querySelectorAll('.menu-container li')
 
-			header.classList.remove('fixed-header')
+		header.classList.add('fixed-header')
+
+		switch (window.scrollY) {
+			case 1290: {
+				//photos
+				menuItems[1].classList.add('active')
+				break
+			}
+			case 1835: {
+				//poll
+				menuItems[2].classList.add('active')
+				break
+			}
+			case 2355: {
+				//moments
+				menuItems[3].classList.add('active')
+				break
+			}
+			case 2818: {
+				//videos
+				menuItems[4].classList.add('active')
+				break
+			}
+			case 0: {
+				header.classList.remove('fixed-header')
+				menuItems[0].classList.add('active')
+			}
 		}
 	})
 })()

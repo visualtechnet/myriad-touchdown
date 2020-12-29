@@ -6,13 +6,14 @@ This project aims to give you real-world scenarios of manipulating the DOM. The 
 
 For this project, refactor and test as much as possible while you are building. You should figure for every piece of functionality you add, you will likely spend just as much time testing and refactoring your code. If it takes you 3 hours to figure out the logic, it should likely take you another 3 hours determining that you wrote the best code possible. As your skills improve, this process will feel more natural. Make sure to remove any debugging code from
 
-## Table of Contents
+# Table of Contents
 
 - [myriad-touchdown](#myriad-touchdown)
-  - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
   - [What You Will Build](#what-you-will-build)
   - [What will I learn?](#what-will-i-learn)
   - [How to get started](#how-to-get-started)
+  - [Live Server Host](#live-server-host)
   - [References](#references)
 
 ## What You Will Build
@@ -46,6 +47,10 @@ npm install
 ```
 npm install live-server
 ```
+
+## Live Server Host
+
+[https://kind-aryabhata-7b2c95.netlify.app/](https://kind-aryabhata-7b2c95.netlify.app/)
 
 ## References
 
