@@ -154,6 +154,10 @@
 		const titleVideos = document.querySelector('.title-videos')
 		const titlesMarkup = document.querySelectorAll('.title')
 
+		if (header.classList.contains('header-hidden')) {
+			header.classList.remove('header-hidden')
+		}
+
 		header.classList.add('fixed-header')
 
 		menuItems.forEach((activeItem) => {
@@ -217,5 +221,11 @@
 			menuItems[4].classList.add('active')
 			titleVideos.classList.add('title-active')
 		}
+
+		setTimeout(function () {
+			const header = document.querySelector('header')
+
+			if (window.scrollY > 300) header.classList.add('header-hidden')
+		}, 2000)
 	})
 })()

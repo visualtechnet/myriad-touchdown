@@ -3,6 +3,10 @@ header {
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: center;
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+	height: 73px;
 }
 
 .fixed-header {
@@ -40,4 +44,9 @@ nav li.active {
 nav li:hover {
 	border-bottom: solid 2px rgba(114, 2, 11, 1);
 	color: #ffffff;
+}
+
+.header-hidden {
+	height: 0;
+	display: none;
 }
