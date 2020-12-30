@@ -51,3 +51,19 @@ main {
 	min-height: 200px;
 	margin: 20px 0;
 }
+
+.scroll2Top {
+	display: none;
+	position: fixed;
+	bottom: 100px;
+	right: 30px;
+}
+
+.visible {
+	display: block;
+}
+
+.scroll2Top i {
+	font-size: 1.4em;
+	color: rgba(0, 0, 0, 0.9);
+}

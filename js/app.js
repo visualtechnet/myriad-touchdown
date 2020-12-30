@@ -132,40 +132,75 @@
 	}
 
 	window.addEventListener('DOMContentLoaded', function () {
+		const scroll2Top = document.querySelector('.scroll2Top')
+
 		loadMenu()
+
+		scroll2Top.addEventListener('click', function () {
+			window.scrollTo(0, 0)
+
+			return false
+		})
 	})
 
 	window.addEventListener('scroll', function () {
 		const header = document.querySelector('header')
 		const menuItems = document.querySelectorAll('.menu-container li')
+		const scroll2Top = document.querySelector('.scroll2Top')
 
 		header.classList.add('fixed-header')
 
-		switch (window.scrollY) {
-			case 1290: {
-				//photos
-				menuItems[1].classList.add('active')
-				break
-			}
-			case 1835: {
-				//poll
-				menuItems[2].classList.add('active')
-				break
-			}
-			case 2355: {
-				//moments
-				menuItems[3].classList.add('active')
-				break
-			}
-			case 2818: {
-				//videos
-				menuItems[4].classList.add('active')
-				break
-			}
-			case 0: {
-				header.classList.remove('fixed-header')
-				menuItems[0].classList.add('active')
-			}
+		menuItems.forEach((activeItem) => {
+			activeItem.classList.remove('active')
+		})
+
+		if (window.scrollY == 0) {
+			header.classList.remove('fixed-header')
+			scroll2Top.classList.remove('visible')
+		}
+
+		if (menuItems.length === 0) {
+			return
+		}
+
+		console.log(window.scrollY)
+
+		if (
+			window.scrollY >= 320 &&
+			scroll2Top.classList.contains('visible') == false
+		) {
+			scroll2Top.classList.add('visible')
+		}
+
+		if (
+			window.scrollY >= 0 &&
+			window.scrollY < 1290 &&
+			menuItems[0].classList.contains('active') == false
+		) {
+			menuItems[0].classList.add('active')
+		} else if (
+			window.scrollY >= 1290 &&
+			window.scrollY < 1835 &&
+			menuItems[1].classList.contains('active') == false
+		) {
+			menuItems[1].classList.add('active')
+		} else if (
+			window.scrollY >= 1835 &&
+			window.scrollY < 2355 &&
+			menuItems[2].classList.contains('active') == false
+		) {
+			menuItems[2].classList.add('active')
+		} else if (
+			window.scrollY >= 2355 &&
+			window.scrollY < 2618 &&
+			menuItems[3].classList.contains('active') == false
+		) {
+			menuItems[3].classList.add('active')
+		} else if (
+			window.scrollY >= 2618 &&
+			menuItems[4].classList.contains('active') == false
+		) {
+			menuItems[4].classList.add('active')
 		}
 	})
 })()
