@@ -147,6 +147,12 @@
 		const header = document.querySelector('header')
 		const menuItems = document.querySelectorAll('.menu-container li')
 		const scroll2Top = document.querySelector('.scroll2Top')
+		const titleNews = document.querySelector('.title-news')
+		const titlePhotos = document.querySelector('.title-photos')
+		const titlePoll = document.querySelector('.title-poll')
+		const titleMoments = document.querySelector('.title-moments')
+		const titleVideos = document.querySelector('.title-videos')
+		const titlesMarkup = document.querySelectorAll('.title')
 
 		header.classList.add('fixed-header')
 
@@ -163,8 +169,6 @@
 			return
 		}
 
-		console.log(window.scrollY)
-
 		if (
 			window.scrollY >= 320 &&
 			scroll2Top.classList.contains('visible') == false
@@ -172,35 +176,46 @@
 			scroll2Top.classList.add('visible')
 		}
 
+		titlesMarkup.forEach((title) => {
+			if (title.classList.contains('title-active')) {
+				title.classList.remove('title-active')
+			}
+		})
+
 		if (
 			window.scrollY >= 0 &&
 			window.scrollY < 1290 &&
 			menuItems[0].classList.contains('active') == false
 		) {
 			menuItems[0].classList.add('active')
+			titleNews.classList.add('title-active')
 		} else if (
 			window.scrollY >= 1290 &&
 			window.scrollY < 1835 &&
 			menuItems[1].classList.contains('active') == false
 		) {
 			menuItems[1].classList.add('active')
+			titlePhotos.classList.add('title-active')
 		} else if (
 			window.scrollY >= 1835 &&
 			window.scrollY < 2355 &&
 			menuItems[2].classList.contains('active') == false
 		) {
 			menuItems[2].classList.add('active')
+			titlePoll.classList.add('title-active')
 		} else if (
 			window.scrollY >= 2355 &&
 			window.scrollY < 2618 &&
 			menuItems[3].classList.contains('active') == false
 		) {
 			menuItems[3].classList.add('active')
+			titleMoments.classList.add('title-active')
 		} else if (
 			window.scrollY >= 2618 &&
 			menuItems[4].classList.contains('active') == false
 		) {
 			menuItems[4].classList.add('active')
+			titleVideos.classList.add('title-active')
 		}
 	})
 })()
