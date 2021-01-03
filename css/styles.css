@@ -48,7 +48,9 @@ main {
 }
 
 .item-section {
-	min-height: 200px;
+	display: flex;
+	flex-flow: column nowrap;
+	/* min-height: 200px; */
 	margin: 20px 0;
 }
 

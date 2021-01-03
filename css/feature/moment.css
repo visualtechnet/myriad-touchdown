@@ -10,3 +10,27 @@
 .moments img {
 	max-width: 300px;
 }
+
+@media only screen and (max-width: 1270px) {
+	.moments {
+		grid-template-columns: 40% 40%;
+		grid-gap: 5%;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.moments {
+		grid-template-columns: 40% 40%;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.moments {
+		grid-template-columns: 100%;
+	}
+
+	.moments img {
+		width: 100%;
+		max-width: 100%;
+	}
+}
