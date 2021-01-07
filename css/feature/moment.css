@@ -34,3 +34,15 @@
 		max-width: 100%;
 	}
 }
+
+@media only screen and (max-width: 320px) {
+	.moments {
+		grid-template-columns: 100%;
+		grid-gap: 1%;
+	}
+
+	.moments img {
+		width: 100%;
+		max-width: 100%;
+	}
+}

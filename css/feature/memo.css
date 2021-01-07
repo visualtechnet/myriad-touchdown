@@ -1,0 +1,45 @@
+.memorabilia {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20%;
+	grid-column-gap: 5%;
+}
+
+.memorabilia li {
+	padding-right: 10px;
+	display: flex;
+	justify-content: stretch;
+	align-items: stretch;
+}
+
+.memorabilia img {
+	/* max-height: 150px; */
+	max-width: 250px;
+	border: solid 2px #c2c2c2;
+}
+
+@media only screen and (max-width: 1270px) {
+	.memorabilia {
+		grid-template-columns: 30% 30% 30%;
+
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.memorabilia {
+		grid-template-columns: 40% 40%;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.memorabilia {
+		grid-template-columns: 100%;
+		grid-row-gap: 5px;
+	}
+	.memorabilia img {
+		width: 100%;
+		max-width: 100%;
+	}
+}

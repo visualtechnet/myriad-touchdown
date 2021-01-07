@@ -39,6 +39,8 @@ nav li {
 nav li.active {
 	border-bottom: solid 2px rgba(114, 2, 11, 1);
 	color: #ffffff;
+	font-size: 1.2em;
+	font-weight: bold;
 }
 
 nav li:hover {
@@ -54,5 +56,62 @@ nav li:hover {
 @media only screen and (max-width: 680px) {
 	header {
 		flex-flow: column nowrap;
+	}
+}
+
+@media only screen and (max-width: 414px) {
+	header {
+		flex-flow: column nowrap;
+	}
+
+	nav ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	nav li.active {
+		font-size: 1.1em;
+	}
+
+	.scroll2Top {
+		right: 10px!important;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	header {
+		flex-flow: column nowrap;
+	}
+
+	nav ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	nav li.active {
+		font-size: 1.1em;
+	}
+
+	.scroll2Top {
+		right: 10px!important;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	header {
+		flex-flow: column nowrap;
+	}
+
+	nav ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	nav li.active {
+		font-size: 1.1em;
+	}
+
+	.scroll2Top {
+		right: 10px!important;
 	}
 }

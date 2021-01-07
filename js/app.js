@@ -10,6 +10,7 @@
 		loadNews()
 		loadPhotos()
 		loadMoments()
+		loadMemorabilia()
 	}
 
 	async function loadNews() {
@@ -34,6 +35,12 @@
 		)
 
 		displayMoments(momentsList)
+	}
+
+	async function loadMemorabilia() {
+		const memo = await fetch ('./data/memorabilia.json').then((data) => data.json())
+
+		displayMemo(memo)
 	}
 
 	function handleMenuList() {
@@ -131,6 +138,22 @@
 		momentContainer.appendChild(fragmenItem)
 	}
 
+	function displayMemo(list) {
+		const memoContainer = document.querySelector('.memorabilia')
+		const fragmenItem = document.createDocumentFragment()
+
+		list.forEach(function (item) {
+			const liItem = document.createElement('li')
+			const img = document.createElement('img')
+			img.setAttribute('src', item.url)
+			img.setAttribute('title', item.title)
+			liItem.appendChild(img)
+			fragmenItem.appendChild(liItem)
+		})
+
+		memoContainer.appendChild(fragmenItem)
+	}
+
 	window.addEventListener('DOMContentLoaded', function () {
 		const scroll2Top = document.querySelector('.scroll2Top')
 
@@ -143,89 +166,89 @@
 		})
 	})
 
-	window.addEventListener('scroll', function () {
-		const header = document.querySelector('header')
-		const menuItems = document.querySelectorAll('.menu-container li')
-		const scroll2Top = document.querySelector('.scroll2Top')
-		const titleNews = document.querySelector('.title-news')
-		const titlePhotos = document.querySelector('.title-photos')
-		const titlePoll = document.querySelector('.title-poll')
-		const titleMoments = document.querySelector('.title-moments')
-		const titleVideos = document.querySelector('.title-videos')
-		const titlesMarkup = document.querySelectorAll('.title')
+	// window.addEventListener('scroll', function () {
+	// 	const header = document.querySelector('header')
+	// 	const menuItems = document.querySelectorAll('.menu-container li')
+	// 	const scroll2Top = document.querySelector('.scroll2Top')
+	// 	const titleNews = document.querySelector('.title-news')
+	// 	const titlePhotos = document.querySelector('.title-photos')
+	// 	const titlePoll = document.querySelector('.title-poll')
+	// 	const titleMoments = document.querySelector('.title-moments')
+	// 	const titleVideos = document.querySelector('.title-videos')
+	// 	const titlesMarkup = document.querySelectorAll('.title')
 
-		if (header.classList.contains('header-hidden')) {
-			header.classList.remove('header-hidden')
-		}
+	// 	if (header.classList.contains('header-hidden')) {
+	// 		header.classList.remove('header-hidden')
+	// 	}
 
-		header.classList.add('fixed-header')
+	// 	header.classList.add('fixed-header')
 
-		menuItems.forEach((activeItem) => {
-			activeItem.classList.remove('active')
-		})
+	// 	menuItems.forEach((activeItem) => {
+	// 		activeItem.classList.remove('active')
+	// 	})
 
-		if (window.scrollY == 0) {
-			header.classList.remove('fixed-header')
-			scroll2Top.classList.remove('visible')
-		}
+	// 	if (window.scrollY == 0) {
+	// 		header.classList.remove('fixed-header')
+	// 		scroll2Top.classList.remove('visible')
+	// 	}
 
-		if (menuItems.length === 0) {
-			return
-		}
+	// 	if (menuItems.length === 0) {
+	// 		return
+	// 	}
 
-		if (
-			window.scrollY >= 320 &&
-			scroll2Top.classList.contains('visible') == false
-		) {
-			scroll2Top.classList.add('visible')
-		}
+	// 	if (
+	// 		window.scrollY >= 320 &&
+	// 		scroll2Top.classList.contains('visible') == false
+	// 	) {
+	// 		scroll2Top.classList.add('visible')
+	// 	}
 
-		titlesMarkup.forEach((title) => {
-			if (title.classList.contains('title-active')) {
-				title.classList.remove('title-active')
-			}
-		})
+	// 	titlesMarkup.forEach((title) => {
+	// 		if (title.classList.contains('title-active')) {
+	// 			title.classList.remove('title-active')
+	// 		}
+	// 	})
 
-		if (
-			window.scrollY >= 0 &&
-			window.scrollY < 1290 &&
-			menuItems[0].classList.contains('active') == false
-		) {
-			menuItems[0].classList.add('active')
-			titleNews.classList.add('title-active')
-		} else if (
-			window.scrollY >= 1290 &&
-			window.scrollY < 1835 &&
-			menuItems[1].classList.contains('active') == false
-		) {
-			menuItems[1].classList.add('active')
-			titlePhotos.classList.add('title-active')
-		} else if (
-			window.scrollY >= 1835 &&
-			window.scrollY < 2355 &&
-			menuItems[2].classList.contains('active') == false
-		) {
-			menuItems[2].classList.add('active')
-			titlePoll.classList.add('title-active')
-		} else if (
-			window.scrollY >= 2355 &&
-			window.scrollY < 2618 &&
-			menuItems[3].classList.contains('active') == false
-		) {
-			menuItems[3].classList.add('active')
-			titleMoments.classList.add('title-active')
-		} else if (
-			window.scrollY >= 2618 &&
-			menuItems[4].classList.contains('active') == false
-		) {
-			menuItems[4].classList.add('active')
-			titleVideos.classList.add('title-active')
-		}
+	// 	if (
+	// 		window.scrollY >= 0 &&
+	// 		window.scrollY < 1290 &&
+	// 		menuItems[0].classList.contains('active') == false
+	// 	) {
+	// 		menuItems[0].classList.add('active')
+	// 		titleNews.classList.add('title-active')
+	// 	} else if (
+	// 		window.scrollY >= 1290 &&
+	// 		window.scrollY < 1835 &&
+	// 		menuItems[1].classList.contains('active') == false
+	// 	) {
+	// 		menuItems[1].classList.add('active')
+	// 		titlePhotos.classList.add('title-active')
+	// 	} else if (
+	// 		window.scrollY >= 1835 &&
+	// 		window.scrollY < 2355 &&
+	// 		menuItems[2].classList.contains('active') == false
+	// 	) {
+	// 		menuItems[2].classList.add('active')
+	// 		titlePoll.classList.add('title-active')
+	// 	} else if (
+	// 		window.scrollY >= 2355 &&
+	// 		window.scrollY < 2618 &&
+	// 		menuItems[3].classList.contains('active') == false
+	// 	) {
+	// 		menuItems[3].classList.add('active')
+	// 		titleMoments.classList.add('title-active')
+	// 	} else if (
+	// 		window.scrollY >= 2618 &&
+	// 		menuItems[4].classList.contains('active') == false
+	// 	) {
+	// 		menuItems[4].classList.add('active')
+	// 		titleVideos.classList.add('title-active')
+	// 	}
 
-		setTimeout(function () {
-			const header = document.querySelector('header')
+	// 	setTimeout(function () {
+	// 		const header = document.querySelector('header')
 
-			if (window.scrollY > 300) header.classList.add('header-hidden')
-		}, 2000)
-	})
+	// 		if (window.scrollY > 300) header.classList.add('header-hidden')
+	// 	}, 2000)
+	// })
 })()

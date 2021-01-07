@@ -12,11 +12,7 @@
 		"source": "moments.json"
 	},
 	{
-		"title": "Videos",
-		"source": ""
-	},
-	{
-		"title": "Poll",
-		"source": ""
+		"title": "Memorabilia",
+		"source": "memorabilia.json"
 	}
 ]
