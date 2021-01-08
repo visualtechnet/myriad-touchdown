@@ -1,12 +1,6 @@
 ;(function () {
-	let menuList = null
-
 	async function loadMenu() {
-		const menuList = await fetch('./data/menu.json').then((data) =>
-			data.json()
-		)
-
-		displayMenu(menuList)
+		displayMenu()
 		loadNews()
 		loadPhotos()
 		loadMoments()
@@ -46,39 +40,40 @@
 	function handleMenuList() {
 		const menuText = this.textContent.toLowerCase()
 		const section = document.querySelector('#' + menuText)
+		const sectionTitle = document.querySelector(`#${menuText} .title`)
 		const header = document.querySelector('header')
 		const allMenuItems = document.querySelectorAll('.menu-container li')
+		const allSectionTitle = document.querySelectorAll('.item-section .title')
 
-		section.scrollIntoView({
-			behavior: 'smooth',
-			block: 'nearest',
-			inline: 'end'
-		})
+		const { y } = section.getBoundingClientRect()
+
+		//window.scrollTo({ top: y - 200, behavior: 'smooth'})
+		section.scrollIntoView(true, { behavior: 'smooth' })
+
 		header.classList.add('fixed-header')
 
 		allMenuItems.forEach(function (menu) {
 			menu.classList.remove('active')
 		})
 
-		this.classList.add('active')
-	}
-
-	function displayMenu(list) {
-		const menuContainer = document.querySelector('.menu-container')
-		const fragmenItem = document.createDocumentFragment()
-
-		list.forEach(function (item, index) {
-			const liItem = document.createElement('li')
-			liItem.textContent = item.title
-			liItem.addEventListener('click', handleMenuList)
-
-			if (index === 0) {
-				liItem.classList.add('active')
-			}
-			fragmenItem.appendChild(liItem)
+		allSectionTitle.forEach(function (title) {
+			title.classList.remove('title-active')
 		})
 
-		menuContainer.appendChild(fragmenItem)
+		this.classList.add('active')
+		sectionTitle.classList.add('title-active')
+	}
+
+	function displayMenu() {
+		const liNews = document.querySelector('#liNews')
+		const liPhotos = document.querySelector('#liPhotos')
+		const liMoments = document.querySelector('#liMoments')
+		const liMemo = document.querySelector('#liMemo')
+		liNews.addEventListener('click', handleMenuList)
+		liPhotos.addEventListener('click', handleMenuList)
+		liMoments.addEventListener('click', handleMenuList)
+		liMemo.addEventListener('click', handleMenuList)
+
 	}
 
 	function displayNews(list) {
