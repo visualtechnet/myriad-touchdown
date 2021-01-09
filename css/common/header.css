@@ -30,20 +30,24 @@ nav ul {
 	display: flex;
 }
 
-nav li {
-	padding: 10px;
+
+nav li a {
 	border-bottom: solid 2px transparent;
 	color: antiquewhite;
+	text-decoration: none;
+	padding: 10px;
 }
 
-nav li.active {
+nav li a.active {
 	border-bottom: solid 2px rgba(114, 2, 11, 1);
 	color: #ffffff;
 	font-size: 1.2em;
 	font-weight: bold;
 }
 
-nav li:hover {
+nav li a:hover {
+	font-size: 1.2em;
+	font-weight: bold;
 	border-bottom: solid 2px rgba(114, 2, 11, 1);
 	color: #ffffff;
 }
@@ -69,12 +73,16 @@ nav li:hover {
 		padding: 0;
 	}
 
-	nav li.active {
+	nav li a.active {
 		font-size: 1.1em;
 	}
 
 	.scroll2Top {
 		right: 10px!important;
+	}
+
+	.fixed-header nav {
+		padding-bottom: 20px;
 	}
 }
 
@@ -88,12 +96,16 @@ nav li:hover {
 		padding: 0;
 	}
 
-	nav li.active {
+	nav li a.active {
 		font-size: 1.1em;
 	}
 
 	.scroll2Top {
 		right: 10px!important;
+	}
+
+	.fixed-header nav {
+		padding-bottom: 20px;
 	}
 }
 
@@ -107,11 +119,15 @@ nav li:hover {
 		padding: 0;
 	}
 
-	nav li.active {
+	nav li a.active {
 		font-size: 1.1em;
 	}
 
 	.scroll2Top {
 		right: 10px!important;
+	}
+
+	.fixed-header nav {
+		padding-bottom: 20px;
 	}
 }
